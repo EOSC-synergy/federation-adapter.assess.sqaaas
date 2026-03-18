@@ -1,0 +1,56 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: feature/pynblint
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/madgeek-arc/federation-adapter:
+      branch: master
+      repo: https://github.com/madgeek-arc/federation-adapter
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/madgeek-arc/federation-adapter git:
+        commands:
+        - /usr/bin/env sh .sqa/script.clammy-plum-bombay.sh
+        container: qc.acc_beady-auburn-giraffe
+  QC.Doc:
+    repos:
+      github.com/madgeek-arc/federation-adapter find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.seedy-ecru-bullfrog.sh
+        container: qc.doc_jumpy-amber-iguana
+      github.com/madgeek-arc/federation-adapter git:
+        commands:
+        - /usr/bin/env sh .sqa/script.ready-red-ocelot.sh
+        container: qc.doc_geeky-amber-bird
+      github.com/madgeek-arc/federation-adapter markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleazy-bistre-moth.sh
+        container: qc.doc_bumpy-ochre-gharial
+  QC.Lic:
+    repos:
+      github.com/madgeek-arc/federation-adapter licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.sunny-ultramarine-ibis.sh
+        container: qc.lic_blurry-burgundy-warthog
+  QC.Sty:
+    repos:
+      github.com/madgeek-arc/federation-adapter checkstyle:
+        commands:
+        - /usr/bin/env sh .sqa/script.nippy-orange-oriole.sh
+        container: qc.sty_snazzy-magnolia-orangutan
+      github.com/madgeek-arc/federation-adapter jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.goopy-olivine-goose.sh
+        container: qc.sty_freaky-plum-lionfish
+  QC.Ver:
+    repos:
+      github.com/madgeek-arc/federation-adapter get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.shabby-persimmon-dog.sh
+        container: qc.ver_muzzy-cornflower-penguin
+timeout: 5400
