@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: feature/pynblint
+      branch: feature/pynblint_fix
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/madgeek-arc/federation-adapter:
       branch: master
@@ -15,42 +15,42 @@ sqa_criteria:
     repos:
       github.com/madgeek-arc/federation-adapter git:
         commands:
-        - /usr/bin/env sh .sqa/script.clammy-plum-bombay.sh
-        container: qc.acc_beady-auburn-giraffe
+        - /usr/bin/env sh .sqa/script.homey-cerise-cat.sh
+        container: qc.acc_hilly-cerise-wasp
   QC.Doc:
     repos:
       github.com/madgeek-arc/federation-adapter find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-ecru-bullfrog.sh
-        container: qc.doc_jumpy-amber-iguana
+        - /usr/bin/env sh .sqa/script.scaly-orange-panda.sh
+        container: qc.doc_sickly-flax-budgerigar
       github.com/madgeek-arc/federation-adapter git:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-red-ocelot.sh
-        container: qc.doc_geeky-amber-bird
+        - /usr/bin/env sh .sqa/script.sleazy-mustard-malamute.sh
+        container: qc.doc_wimpy-ochre-ladybird
       github.com/madgeek-arc/federation-adapter markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-bistre-moth.sh
-        container: qc.doc_bumpy-ochre-gharial
+        - /usr/bin/env sh .sqa/script.chummy-amber-fowl.sh
+        container: qc.doc_wimpy-olive-zonkey
   QC.Lic:
     repos:
       github.com/madgeek-arc/federation-adapter licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-ultramarine-ibis.sh
-        container: qc.lic_blurry-burgundy-warthog
+        - /usr/bin/env sh .sqa/script.freaky-aqua-zebu.sh
+        container: qc.lic_smelly-vermilion-sheep
   QC.Sty:
     repos:
       github.com/madgeek-arc/federation-adapter checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-orange-oriole.sh
-        container: qc.sty_snazzy-magnolia-orangutan
+        - /usr/bin/env sh .sqa/script.woolly-olivine-millipede.sh
+        container: qc.sty_chummy-wheat-salamander
       github.com/madgeek-arc/federation-adapter jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.goopy-olivine-goose.sh
-        container: qc.sty_freaky-plum-lionfish
+        - /usr/bin/env sh .sqa/script.gloppy-cream-mongrel.sh
+        container: qc.sty_stinky-chestnut-kiwi
   QC.Ver:
     repos:
       github.com/madgeek-arc/federation-adapter get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-persimmon-dog.sh
-        container: qc.ver_muzzy-cornflower-penguin
+        - /usr/bin/env sh .sqa/script.droopy-indigo-buffalo.sh
+        container: qc.ver_flabby-myrtle-tarantula
 timeout: 5400
