@@ -15,42 +15,42 @@ sqa_criteria:
     repos:
       github.com/madgeek-arc/federation-adapter git:
         commands:
-        - /usr/bin/env sh .sqa/script.woozy-turquoise-crocodile.sh
-        container: qc.acc_craggy-vermilion-coral
+        - /usr/bin/env sh .sqa/script.gloppy-bronze-gar.sh
+        container: qc.acc_muzzy-cerulean-ladybird
   QC.Doc:
     repos:
       github.com/madgeek-arc/federation-adapter find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-pumpkin-schnauzer.sh
-        container: qc.doc_goopy-rose-crane
+        - /usr/bin/env sh .sqa/script.fuzzy-coral-crab.sh
+        container: qc.doc_leaky-cinnamon-monster
       github.com/madgeek-arc/federation-adapter git:
         commands:
-        - /usr/bin/env sh .sqa/script.pretty-seashell-gopher.sh
-        container: qc.doc_craggy-carmine-shrew
+        - /usr/bin/env sh .sqa/script.boozy-platinum-chow.sh
+        container: qc.doc_trippy-ecru-panda
       github.com/madgeek-arc/federation-adapter markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.wiggy-amaranth-bandicoot.sh
-        container: qc.doc_stealthy-cornflower-lobster
+        - /usr/bin/env sh .sqa/script.pasty-chestnut-havanese.sh
+        container: qc.doc_whiny-auburn-booby
   QC.Lic:
     repos:
       github.com/madgeek-arc/federation-adapter licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-magnolia-monster.sh
-        container: qc.lic_silly-wisteria-worm
+        - /usr/bin/env sh .sqa/script.nippy-olive-goat.sh
+        container: qc.lic_bluesy-jade-gecko
   QC.Sty:
     repos:
       github.com/madgeek-arc/federation-adapter checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.lanky-wisteria-dollar.sh
-        container: qc.sty_trippy-emerald-whale
+        - /usr/bin/env sh .sqa/script.grumpy-plum-moorhen.sh
+        container: qc.sty_seedy-zucchini-snake
       github.com/madgeek-arc/federation-adapter jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.skanky-copper-mayfly.sh
-        container: qc.sty_droopy-red-binturong
+        - /usr/bin/env sh .sqa/script.hilly-fuchsia-crab.sh
+        container: qc.sty_craggy-linen-capuchin
   QC.Ver:
     repos:
       github.com/madgeek-arc/federation-adapter get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-vermilion-eel.sh
-        container: qc.ver_dorky-red-macaw
+        - /usr/bin/env sh .sqa/script.foggy-maroon-seahorse.sh
+        container: qc.ver_breezy-mustard-eleuth
 timeout: 5400
